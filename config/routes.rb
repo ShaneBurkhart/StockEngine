@@ -1,4 +1,7 @@
 StockEngine::Application.routes.draw do
+  
+  root to: 'static#search'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

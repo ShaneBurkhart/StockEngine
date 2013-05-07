@@ -1,0 +1,28 @@
+@import "bootstrap";
+
+/* Universal */
+body {
+	margin-top: 65px;
+}
+
+/* Header */
+
+#logo {
+	float: left;
+	margin-right: 10px;
+	font-size: 1.7em;
+	color: #fff;
+	letter-spacing: -1px;
+	padding-top: 9px;
+	font-weight: bold;
+	line-height: 1;
+
+	&:hover {
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+.center {
+	text-align: center;
+}
