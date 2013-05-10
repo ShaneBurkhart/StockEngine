@@ -1,6 +1,12 @@
 StockEngine::Application.routes.draw do
-  
   root to: 'static#home'
+  match 'search', to: 'static#search'
+
+  namespace :admin do
+    root to: "crawler#show"
+    match "/execute", to: "crawler#execute"
+  end
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

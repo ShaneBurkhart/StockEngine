@@ -1,0 +1,36 @@
+<% provide(:title, 'Search' )%>
+<div class="container">
+	<h1>Money Makers</h1>
+	<small><%= "#{@companies.length} results were found" %></small>
+	<ul class="results unstyled" >
+		<% @companies.each do |c| %>
+			<li class="row">
+				<div class="span12 well">
+					<div class="row">
+						<div class="span12">
+							<p class="company-name"><%= c.name %> <span class="ticker"><%= c.symbol %></span></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="span2">
+							<p class="stat no-space">Market Cap: <%= color_dollar c.market_cap %></p>
+							<p class="stat no-space">From 50 Day MA: <%= color_percent c.percent_from_fifty_day_moving_average %></p>
+							<p class="stat no-space">30 Day VROC: <%= color_percent c.thirty_day_percent_volume_rate_of_change %></p>
+							<%= link_to "Company News", news_url(c.symbol) %>
+						</div>
+						<div class="span5">
+							<%= image_tag(three_month_chart_url(c.symbol), :alt => "Moving average chart for #{ c.symbol }") %>
+							<br>
+							<small class="muted">3 Month</small>
+						</div>
+						<div class="span5">
+							<%= image_tag(six_month_chart_url(c.symbol), :alt => "Moving average chart for #{ c.symbol }") %>
+							<br>
+							<small class="muted">6 Month</small>
+						</div>
+					</div>
+				</div>
+			</li>
+		<% end %>
+	</ul>
+</div>

@@ -23,6 +23,30 @@ body {
 	}
 }
 
+
+/* Results */
+.results {
+	.company-name {
+		font-size: 1.1em;
+	}
+	.ticker {
+		font-size: .6em;
+	}
+	.stat {
+		font-size: .7em;
+	}
+}
+
 .center {
 	text-align: center;
+}
+.no-space {
+	padding: 0;
+	margin: 0;
+}
+.green {
+	color: #0a0;
+}
+.red {
+	color: #f00;
 }

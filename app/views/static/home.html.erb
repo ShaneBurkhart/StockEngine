@@ -1,10 +1,19 @@
-<% provide(:title, 'Search' )%>
 <div class="container">
 	<div class="hero-unit center">
 		<h1>Search For Stocks</h1>
-		<p>Currently a predefined search.</p>
+		<p>Predefine search of all NASDAQ stocks.  Data is updated every night at 12 PM CST using the Yahoo Finance API.  The results are based of the volume rate of change and distance of price from moving average.  All results are the opinion of Shane Burkhart and are merely suggestions.  Shane Burkhart or the site cannot be held responsible for any losses.  But gains are a different story ;)</p>
 		<p>
-			<%= link_to "Start Search", "#", class: 'btn btn-primary btn-large' %>
+			<%= link_to "Get Winners", search_path, class: 'btn btn-primary btn-large' %>
 		</p>
+	</div>
+	<div class="row" id="about">
+		<div class="span6">
+			<h3>The Strategy</h3>
+			<p>My strategy is very basic and is extremely common but I thought I would reiterate.  My strategy compares the fifty day moving average to the thirty day volume rate of change.  The idea is to buy stocks when they cross above the moving average and sell when they cross back under.  Having said that, this is not solely enough to base trades on because a stock can gain without being backed by trades.  This is where the volume rate of change comes in.  If the volume rate of change is positive, meaning more stock is being traded at the current time period, then the current trend, whether negative or positive, is likely to continue.  However, if the volume rate of change is negative or stagnant, the trend is likely not backed by the public, and will most likely level off or swing in the other direction.  With the combination of the two, entrance and exit strategies can be established.</p>
+		</div>
+		<div class="span6">
+			<h3>Calculations</h3>
+			<p>The strategy may be fairly common however, some data is not readily available and thus needs calculated.  I have found that is it is rare to find volume rate of change data or charts so I calculated my own.  The volume rate of change is calculated similarly to that of the moving average: ((Vn - V) / Vn) * 100 where Vn is the volume n days ago and V is the previous day's volume.  As for other data, it was fairly easy to find and is provided in the Yahoo Finance API</p>
+		</div>
 	</div>
 </div>

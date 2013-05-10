@@ -2,6 +2,13 @@
 	<div class="navbar-inner">
 		<div class="container">
 			<%= link_to "Stock Engine", root_path, id: 'logo' %>
+			<nav>
+				<ul class="nav pull-right">
+					<li><%= link_to "Home", root_path %></li>
+					<li><%= link_to "About", root_path + "#about" %></li>
+					<li><%= link_to "Search", search_path %></li>
+				</ul>
+			</nav>
 		</div>
 	</div>
 </header>
