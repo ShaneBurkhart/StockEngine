@@ -31,7 +31,8 @@ GEM
     annotate (2.5.0)
       rake
     arel (3.0.2)
-    bootstrap-sass (2.1.0.0)
+    bootstrap-sass (2.3.1.0)
+      sass (~> 3.2)
     builder (3.0.4)
     capybara (1.1.2)
       mime-types (>= 1.16)
@@ -53,7 +54,6 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    ffi (1.8.1)
     ffi (1.8.1-x86-mingw32)
     hike (1.2.2)
     i18n (0.6.1)
@@ -68,10 +68,8 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.23)
     multi_json (1.7.3)
-    nokogiri (1.5.9)
     nokogiri (1.5.9-x86-mingw32)
-    pg (0.12.2)
-    pg (0.12.2-x86-mingw32)
+    pg (0.15.1-x86-mingw32)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -114,7 +112,7 @@ GEM
     rubyzip (0.9.9)
     rufus-scheduler (2.0.19)
       tzinfo (>= 0.3.23)
-    sass (3.2.8)
+    sass (3.2.9)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -147,12 +145,12 @@ PLATFORMS
 
 DEPENDENCIES
   annotate (= 2.5.0)
-  bootstrap-sass (= 2.1)
+  bootstrap-sass
   capybara (= 1.1.2)
   coffee-rails (~> 3.2.1)
   jquery-rails
-  pg (= 0.12.2)
-  rails (= 3.2.13)
+  pg
+  rails
   rspec-rails (= 2.11.0)
   rufus-scheduler
   sass-rails (~> 3.2.3)
